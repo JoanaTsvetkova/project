@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #fff;
+  }
+  
+  #home {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/lo_fi_room_purple_by_hyrumusic_dfvxfrr-fullview.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-top: 120px;
+  }
+  
+  nav {
+    background-color: #461285;
+    width: 100%;
+    padding: 2px 0;
+    display: flex;
+    padding-left: 30px;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 35px;
+    cursor: pointer;
+
+  }
+  
+  nav ul {
+    flex: 1;
+    margin-left: 210px;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin: 15px 20px;
+  }
+  
+  nav ul li a {
+    color: #f8eaf5;
+    text-decoration: none;
+  }
+  
+  .content {
+    margin-left: 100px;
+  }
+  
+  .content h1 {
+    font-size: 80px;
+    margin-top: 1px;
+    font-style: italic;
+    color: #e7a9f0;
+    text-decoration-line: underline;
+    text-decoration-color: #be8bee;
+  }
+  
+  .content h1 span {
+    color: #884fc6;
+  }
+  
+  .content .buy {
+    display: inline-block;
+    margin-top: 30px;
+    background: #7f2ecb;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 50px;
+    border-radius: 30px;
+    font-size: 20px;
+  }
+  
+  
+  
+  ::-webkit-scrollbar {
+      width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+      border-radius: 4px;
+      background-color: #ffffff;
+      border: 2px solid #510e3f;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: #ec98d8;
+  }
+  
+  .errorContainer {
+    position: fixed;
+    right: 100px;
+    min-width: 100px;
+    display: block;
+    z-index: 11111;
+    top: 80px;
+    text-align: center;
+    border-radius: 20px;
+    color: rgb(242, 221, 244);
+    height: auto;
+    width: 320px;
+  }
+  
+  .errorContainer > p {
+    background: #000000;
+    font-size: 20px;
+    padding: 20px;
+    height: auto;
+    border-radius: 20px;
+    font-style: italic;
+  }
+  
+  .errorContainer {
+    -moz-animation: cssAnimation 0s ease-in 2s forwards;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in 2s forwards;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0s ease-in 2s forwards;
+    /* Opera */
+    animation: cssAnimation 0s ease-in 2s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes cssAnimation {
+    to {
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      padding: 0;
+    }
+  }
+  
+  @-webkit-keyframes cssAnimation {
+    to {
+      width: 0;
+      height: 0;
+      visibility: hidden;
+      padding: 0;
+    }
+  }
+  
