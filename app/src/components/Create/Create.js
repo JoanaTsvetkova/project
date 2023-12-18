@@ -1,5 +1,8 @@
 import { useState   } from "react";
 
+import styles from './Create.module.css'
+
+
 export const Create = ({
     onCreateGameSub
 }) => {
@@ -22,9 +25,9 @@ const onSubmit = (e) => {
 }
 
     return (
-        <main id="create">
-            <section id="create-container">
-                <div className="create-container-info">
+        <main id="create" className={styles.create}>
+            <section id="createContainer" className={styles.createContainer}>
+                <div className="createContainerInfo">
                     <h1>Add A New Game</h1>
                     <form onSubmit={onSubmit}>
                         <label>Game Name:</label>

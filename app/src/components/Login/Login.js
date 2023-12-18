@@ -2,6 +2,9 @@ import { AuthContext } from "../../context/AuthContext";
 
 import { useContext, useState } from "react";
 
+import styles from './Login.module.css'
+
+
 
 export const Login = () => {
     const {onLogin} = useContext(AuthContext);
@@ -20,8 +23,8 @@ export const Login = () => {
         onLogin(values);
     };
     return (
-        <section id="login">
-            <div className="login-box">
+        <main id="login" className={styles.login}>
+            <div id="loginBox" className={styles.loginBox}>
                 <h1>Login</h1>
                 <form onSubmit={onSubmit}>
                     <label htmlFor="email">Email</label>
@@ -34,7 +37,7 @@ export const Login = () => {
                     Don't have an account? <a href="/register">Sign up</a>
                 </p>
             </div>
-        </section>
+        </main>
 
     );
 }

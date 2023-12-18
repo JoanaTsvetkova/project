@@ -1,16 +1,8 @@
 
-#home {
-  width: 100%;
-  height: 100vh;
-  background-image: url('../public/images/lo_fi_room_purple_by_hyrumusic_dfvxfrr-fullview.jpg');
-  background-position: center;
-  background-size: cover;
-}
-
 nav {
   background-color: #461285;
   width: 100%;
-  padding: 2px 0;
+  height: 41px;
   display: flex;
   padding-left: 30px;
   align-items: center;
@@ -24,7 +16,7 @@ nav {
 
 nav ul {
   flex: 1;
-  margin-left: 50vh;
+  margin-left: 210px;
 }
 
 nav ul li {
@@ -37,149 +29,55 @@ nav ul li a {
   text-decoration: none;
 }
 
-.content {
-  margin-left: 100px;
-}
-
-.content h1 {
-  font-size: 80px;
-  margin-top: 1px;
-  font-style: italic;
-  color: #e7a9f0;
-  text-decoration-line: underline;
-  text-decoration-color: #be8bee;
-}
-
-.content h1 span {
-  color: #884fc6;
-}
-
 ::-webkit-scrollbar {
-    width: 8px;
+  width: 8px;
+  
 }
 
 ::-webkit-scrollbar-track {
-    border-radius: 4px;
-    background-color: #ffffff;
-    border: 2px solid #510e3f;
+  border-radius: 4px;
+  background-color: #ffffff;
+  border: 2px solid #510e3f;
 }
 
 ::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-    background-color: #ec98d8;
+  border-radius: 4px;
+  background-color: #ec98d8;
 }
 
 .errorContainer {
-  position: fixed;
-  right: 100px;
-  min-width: 100px;
-  display: block;
-  z-index: 11111;
-  top: 80px;
-  text-align: center;
-  border-radius: 20px;
-  color: rgb(242, 221, 244);
-  height: auto;
-  width: 320px;
+position: fixed;
+right: 100px;
+min-width: 100px;
+display: block;
+z-index: 11111;
+top: 80px;
+text-align: center;
+border-radius: 20px;
+color: rgb(242, 221, 244);
+height: auto;
+width: 320px;
 }
 
 .errorContainer > p {
-  background: #000000;
-  font-size: 20px;
-  padding: 20px;
-  height: auto;
-  border-radius: 20px;
-  font-style: italic;
+background: #000000;
+font-size: 20px;
+padding: 20px;
+height: auto;
+border-radius: 20px;
+font-style: italic;
 }
 
 .errorContainer {
-  -moz-animation: cssAnimation 0s ease-in 2s forwards;
-  /* Firefox */
-  -webkit-animation: cssAnimation 0s ease-in 2s forwards;
-  /* Safari and Chrome */
-  -o-animation: cssAnimation 0s ease-in 2s forwards;
-  /* Opera */
-  animation: cssAnimation 0s ease-in 2s forwards;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+-moz-animation: cssAnimation 0s ease-in 2s forwards;
+/* Firefox */
+-webkit-animation: cssAnimation 0s ease-in 2s forwards;
+/* Safari and Chrome */
+-o-animation: cssAnimation 0s ease-in 2s forwards;
+/* Opera */
+animation: cssAnimation 0s ease-in 2s forwards;
+-webkit-animation-fill-mode: forwards;
+animation-fill-mode: forwards;
 }
-
-#catalog {
-  width: 100%;
-  height: 100vh;
-  background-image: url(../public/images/lo_fi_room_purple_by_hyrumusic_dfvxfrr-fullview.jpg);
-  background-position: center;
-  background-size: cover;
-  padding-top: 30px;
-}
-
-body::-webkit-scrollbar {
-    display: none;
-}
-
-
-.game-list {
-  width: auto;
-  height: 80vh;
-  margin-top: 30px;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  overflow-x: auto;
-}
-
-.all-games .game {
-  display: inline-block;
-  width: 300px;
-  height: 400px;
-  margin-top: 30px;
-  margin-bottom: 20px;
-}
-
-.all-games .game-img img {
-  
-  width: 300px;
-  height: 350px;
-}
-
-
-
-.all-games .game-info {
-  margin-left: auto;
-  font-size: 25px;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  text-shadow: 2px 3px 3px rgb(187, 181, 182);
-  
-}
-
-.all-games .game .btn-details {
-  cursor: pointer;
-  outline: none;
-  font-size: 35px;
-  text-align: center;
-  color: white;
-  text-decoration: none;
-}
-
-.no-games {
-  border-top: 4px solid #2e87cb;
-  border-bottom: 4px solid #2e87cb;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.2);
-  background-color: #096BAB;
-  width: 50%;
-  height: 100px;
-  margin: auto;
-  margin-top: 5%;
-}
-
-.no-games p {
-  font-size: 30px;
-  text-align: center;
-  padding-top: 30px;
-}
-
 
 

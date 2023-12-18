@@ -1,4 +1,4 @@
-.register {
+.login {
     width: 100%;
     height: 100vh;
     background-image: url(../../../public/images/lo_fi_room_purple_by_hyrumusic_dfvxfrr-fullview.jpg);
@@ -7,10 +7,10 @@
     padding-top: 50px;
   }
 
-.box {
+.loginBox {
     color: white;
     width: 360px;
-    height: 500px;
+    height: 320px;
     margin: auto;
     background-color: #6f1ad7;
     border: 2px solid #461285;
@@ -18,19 +18,19 @@
     margin-top: 2%;
 }
 
-.box h1 {
+.loginBox h1 {
     text-align: center;
     padding-top: 15px;
     font-style: italic;
     color: #f8eaf5;
 }
 
-.box form {
+.loginBox form {
     width: 300px;
     margin-left: 20px;
 }
 
-.box form label {
+.loginBox form label {
     display: flex;
     margin-top: 20px;
     margin-bottom: 5px;
@@ -39,7 +39,7 @@
     color: #f8eaf5;
 }
 
-.box form input {
+.loginBox form input {
     width: 320px;
     height: 30px;
     padding-left: 7px;
@@ -50,7 +50,7 @@
     color: #461285;
 }
 
-.box input[type="submit"] {
+.loginBox input[type="submit"] {
     width: 320px;
     height: 35px;
     margin-top: 30px;
@@ -61,14 +61,14 @@
     font-style: italic;
 }
 
-.box p {
+.loginBox p {
     text-align: center;
     font-size: 15px;
     font-style: italic;
-    margin-top: 6%;
+    padding-top: 4%;
 
 }
 
-.box p>a {
+.loginBox p>a {
     color: #050912;
 }

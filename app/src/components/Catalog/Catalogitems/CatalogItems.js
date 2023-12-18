@@ -1,15 +1,17 @@
+import styles from '../Catalog.module.css'
+
 export const CatalogItems = ({
     name,
-    imgUrl,
+    image,
     _id
 }) => {
     return (
-        <div classname="game">
-            <div classname="game-img">
-                <img src={imgUrl} alt={name} />
+        <div id="game" className={styles.game}>
+            <div id="gameImg" className={styles.gameImg}>
+                <img src={image} alt={name}/>
             </div>
-            <div classname="game-info">
-                <a href={`/catalog/:${_id}`} classname="btn-details">
+            <div id="gameInfo" className={styles.gameInfo}> 
+                <a href={`/catalog/${_id}`} id="btnDetails" className={styles.btnDetails}>
                     {name}
                 </a>
             </div>

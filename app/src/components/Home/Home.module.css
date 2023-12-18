@@ -1,0 +1,36 @@
+.home {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../../public/images/lo_fi_room_purple_by_hyrumusic_dfvxfrr-fullview.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-top: 120px;
+}
+
+.content {
+    margin-left: 100px;
+  }
+  
+  .content h1 {
+    font-size: 80px;
+    margin-top: 1px;
+    font-style: italic;
+    color: #e7a9f0;
+    text-decoration-line: underline;
+    text-decoration-color: #be8bee;
+  }
+  
+  .content h1 span {
+    color: #884fc6;
+  }
+  
+  .content .browse {
+    display: inline-block;
+    margin-top: 30px;
+    background: #7f2ecb;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 50px;
+    border-radius: 30px;
+    font-size: 20px;
+  }

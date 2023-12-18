@@ -13,7 +13,9 @@ import { useEffect, useState } from 'react';
 import { Login } from './components/Login/Login';
 
 import { AuthContext } from './context/AuthContext';
-import { Details } from './components/Details/Detail';
+import { Details } from './components/Detals/Detail';
+import { About } from './components/About/About';
+import { Contacts } from './components/Contacts/Contacts';
 
 function App() {
 
@@ -23,7 +25,6 @@ function App() {
   useEffect(()=>{
     gameService.getAllGames()
       .then(result => {
-        console.log(result);
         setGames(result)
       })
   }, [])
@@ -53,7 +54,6 @@ function App() {
 
       <>
         <Navigation />
-        <main id="main-content">
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/register' element={<Register />} />
@@ -61,10 +61,9 @@ function App() {
             <Route path='/catalog' element={<Catalog games={games}/>} />
             <Route path='/catalog/:id' element={<Details/>} />
             <Route path='/create' element={<Create onCreateGameSub={onCreateGameSub}/>} />
-            <Route path='/about' element={<Create />} />
-            <Route path='/contacts' element={<Create />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/contacts' element={<Contacts />} />
           </Routes>
-        </main>
 
 
 

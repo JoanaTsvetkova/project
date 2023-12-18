@@ -1,0 +1,76 @@
+.catalog {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../../public/images/lo_fi_room_purple_by_hyrumusic_dfvxfrr-fullview.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-top: 30px;
+}
+
+.gameList {
+  width: auto;
+  height: 80vh;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  overflow-x: auto;
+}
+
+.allGames h1 {
+  text-align: center;
+  font-style: italic;
+}
+
+.allGames .game {
+  display: inline-block;
+  width: 300px;
+  height: 400px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.gameList .gameImg img {
+
+  width: 300px;
+  height: 350px;
+}
+
+
+
+.allGames .gameInfo {
+  margin-left: auto;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 3px 3px rgb(187, 181, 182);
+
+}
+
+.allGames .game .btnDetails {
+  cursor: pointer;
+  outline: none;
+  font-size: 35px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+.noGames {
+  border-top: 4px solid #2e87cb;
+  border-bottom: 4px solid #2e87cb;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+  background-color: #096BAB;
+  width: 50%;
+  height: 100px;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.noGames p {
+  font-size: 30px;
+  text-align: center;
+  padding-top: 30px;
+}

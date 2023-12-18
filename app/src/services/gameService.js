@@ -1,4 +1,4 @@
-import * as request  from "./requester"
+import * as request from "./requester"
 
 const baseUrl = "http://localhost:3030/jsonstore/games"
 
@@ -7,20 +7,19 @@ export const getAllGames = async () => {
 
    const games = Object.values(result);
 
-   return(games);
+   return (games);
 }
 
 export const createGame = async (data) => {
    const result = await request.post(baseUrl, data);
-   console.log(result)
-      
-      return result;
+
+   return result;
 };
 
-export const getOneGame = async (data) => {
-   const result = await request.get(`${baseUrl}/${data}`);
+export const getOneGame = async (id) => {
+   const result = await request.get(`${baseUrl}/${id}`);
 
    console.log(result);
 
    return result;
-}
+};

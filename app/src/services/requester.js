@@ -13,16 +13,15 @@ const request = async (method, url, data) => {
         }
     };
 
-    console.log(data);
     const response = await fetch(url, options);
 
     try {
 
         const result = await response.json();
-
+        console.log(result);
         return result;
     } catch (error) {
-        return [];
+        return {};
     }
 
 };
