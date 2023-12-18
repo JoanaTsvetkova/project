@@ -1,21 +1,24 @@
 import { Home } from "../Home/Home";
 import { Route, Routes } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 
 export const Navigation = () => {
     return (
         <header className="header">
             <nav>
-                <a href="/"><img src="../images/download-removebg-preview.png" className="logo"/></a>
+                <Link to="/"><img src="../images/download-removebg-preview.png" className="logo"/></Link>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/cataloge">All Games</a></li>
-                    <li><a href="/create">Add Game</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/contacts">Contacts</a></li>
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="/register">Register</a></li>
-                    <li><a href="#">Logout</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/contacts">Contacts</Link></li>
+                    <li><Link to="/catalog">All Games</Link></li>
+
+                    <li><Link to="/create">Add Game</Link></li>
+                    <li><Link to="#">Logout</Link></li>
+
+                    <li><Link to="/login">Login</Link></li>
+                    <li><Link to="/register">Register</Link></li>
                 </ul>
             </nav>
         </header>
