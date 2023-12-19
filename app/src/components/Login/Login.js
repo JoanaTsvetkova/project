@@ -26,7 +26,7 @@ export const Login = () => {
         <main id="login" className={styles.login}>
             <div id="loginBox" className={styles.loginBox}>
                 <h1>Login</h1>
-                <form onSubmit={onSubmit}>
+                <form method="POST" onSubmit={onSubmit}>
                     <label htmlFor="email">Email</label>
                     <input type="email" name="email" placeholder="Email.." value={values.email} onChange={changeHandler}/>
                     <label htmlFor="login-password">Password</label>

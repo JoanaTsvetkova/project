@@ -17,23 +17,31 @@ import { Details } from './components/Detals/Detail';
 import { About } from './components/About/About';
 import { Contacts } from './components/Contacts/Contacts';
 
+import * as authService from './services/authService'
+import { Logout } from './components/Logout/Logout';
+
 function App() {
 
   const navigate = useNavigate();
   const [games, setGames] = useState([]);
 
-  useEffect(()=>{
+  useEffect(() => {
     gameService.getAllGames()
       .then(result => {
         setGames(result)
       })
   }, [])
 
-  const [auth, setAuth] = useState([]);
+  const [auth, setAuth] = useState({});
 
 
   const onLogin = async (data) => {
-  console.log(data); 
+
+    const result = await authService.login(data);
+
+    setAuth(result);
+
+    navigate('/')
   }
 
   const onCreateGameSub = async (data) => {
@@ -44,26 +52,52 @@ function App() {
     navigate('/catalog')
   };
 
-  useEffect(() => {
+  const onRegister = async (values) => {
+    const { confirmPass, ...regidterData} = values;
+    if (confirmPass !== regidterData.password)
+    {
+      return;
+    }
 
+    const user = await authService.register(regidterData)
 
-  }, [])
+    setAuth(user);
+
+    navigate('/')
+  };
+
+  const onLogout = async()=>{
+    authService.logout();
+    setAuth({});
+  }
+
+  const context = {
+    onLogin,
+    onRegister,
+    onLogout,
+    userId: auth._id,
+    email: auth.email,
+    accessToken: auth.accessToken,
+    isAuthenticated: !!auth.accessToken
+
+  }
 
   return (
-    <AuthContext.Provider value={{ onLogin }}>
+    <AuthContext.Provider value={ context }>
 
       <>
         <Navigation />
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/register' element={<Register />} />
-            <Route path='/login' element={<Login onLogin={onLogin} />} />
-            <Route path='/catalog' element={<Catalog games={games}/>} />
-            <Route path='/catalog/:id' element={<Details/>} />
-            <Route path='/create' element={<Create onCreateGameSub={onCreateGameSub}/>} />
-            <Route path='/about' element={<About />} />
-            <Route path='/contacts' element={<Contacts />} />
-          </Routes>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/register' element={<Register onRegister={onRegister}/>} />
+          <Route path='/login' element={<Login onLogin={onLogin} />} />
+          <Route path='/logout' element={<Logout/>} />
+          <Route path='/catalog' element={<Catalog games={games} />} />
+          <Route path='/catalog/:id' element={<Details />} />
+          <Route path='/create' element={<Create onCreateGameSub={onCreateGameSub} />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/contacts' element={<Contacts />} />
+        </Routes>
 
 
 

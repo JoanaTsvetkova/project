@@ -1,4 +1,4 @@
-import { useState, useContext   } from "react";
+import { useState   } from "react";
 
 import styles from './Create.module.css'
 
@@ -25,10 +25,10 @@ const onSubmit = (e) => {
 }
 
     return (
-        <main id="create" className={styles.create}>
-            <section id="createContainer" className={styles.createContainer}>
-                <div className="createContainerInfo">
-                    <h1>Add A New Game</h1>
+        <main id="edit" className={styles.edit}>
+            <section id="editContainer" className={styles.editContainer}>
+                <div className="editContainerInfo">
+                    <h1>Edit Game</h1>
                     <form onSubmit={onSubmit}>
                         <label>Game Name:</label>
                         <input type="text" id="name" name="name" placeholder="Game Name.." value={values.name} onChange={onChangeHandler}/>
